@@ -19,6 +19,7 @@ def plot_time(x, t, main_title=''):
     py.ylabel('respiratory volume (a.u.)')
     py.title('respiratory volume')
     py.suptitle(main_title, fontsize=14)
+    py.tight_layout()
     
 def plot_rxx(x, main_title=''):
     K = np.arange(len(x['rxx_rr']))-len(x['rr'])+1
@@ -39,6 +40,7 @@ def plot_rxx(x, main_title=''):
     py.ylabel('power (a.u.)')
     py.title('respiratory volume')
     py.suptitle(main_title, fontsize=14)
+    py.tight_layout()
 
 def plot_X(x, fs, main_title=''):
     f = np.arange(len(x['RR']))/len(x['RR'])*fs
@@ -62,6 +64,7 @@ def plot_X(x, fs, main_title=''):
     py.title('respiratory volume')
     py.xlim(0,0.5)
     py.suptitle(main_title, fontsize=14)
+    py.tight_layout()
 
 def plot_XY(x, y, fs, main_title=''):
     f = np.arange(len(x['RR']))/len(x['RR'])*fs
@@ -91,3 +94,4 @@ def plot_XY(x, y, fs, main_title=''):
     py.xlim(0,0.5)
     py.legend()
     py.suptitle(main_title, fontsize=14)
+    py.tight_layout()

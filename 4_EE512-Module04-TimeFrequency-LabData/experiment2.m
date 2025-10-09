@@ -24,7 +24,7 @@ bp = filtfilt(b, a, bp);
 
 %% Spectrogram of the BP signal
 % Adjust the window duration below to a better value and explain your choice.
-winduration = 1;    % Window duration in seconds: Find a better suited value
+winduration = 25;    % Window duration in seconds: Find a better suited value
 window = round(winduration*fs);   
 noverlap = round(0.95*winduration*fs);  % Overlap of 95%
 
@@ -36,7 +36,7 @@ title('Spectrogram of the beat-to-beat mean BP signal');
 
 % Adjust the lower limit of the colormap to a better value to improve the 
 % readability of the spectrogram.
-cmaplowlim = min(get(gca, 'clim')); % Lower colormap limit: Find a better value
+cmaplowlim = min(get(gca, 'clim'))+120; % Lower colormap limit: Find a better value
 set(gca, 'clim', [cmaplowlim, max(get(gca, 'clim'))]);
 
 
